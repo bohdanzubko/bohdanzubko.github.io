@@ -3,7 +3,7 @@ block selElm
 
 header
   .logo
-    img(src="../img/svg/logo-settings.svg" alt="Logo")
+    img(src="img/svg/logo-settings.svg" alt="Logo")
     a(href="")
       h1 Dashboard
     h6 v.01
@@ -18,13 +18,13 @@ header
         each item, index in menuItems
           li(class="menu-elm" + (selected[index] ? " menu-elm-sel" : ""))
             a(href=links[index])
-              img(src=`../img/svg/${icons[index] + (selected[index] ? "-wh" : "")}.svg`, alt=`${item} Icon`)
+              img(src=`img/svg/${icons[index] + (selected[index] ? "-wh" : "")}.svg`, alt=`${item} Icon`)
               div #{item}
-              img(src=`../img/svg/${"menu-arrow" + (selected[index] ? "-wh" : "")}.svg`, style=(index == 0 ? "visibility: hidden;" : ""))
+              img(src=`img/svg/${"menu-arrow" + (selected[index] ? "-wh" : "")}.svg`, style=(index == 0 ? "visibility: hidden;" : ""))
 
   a(href="")
     .user-profile
-      img(src="../img/jpg/account-photo.jpg" class="user-photo" alt="User Photo")
+      img(src="img/jpg/account-photo.jpg" class="user-photo" alt="User Photo")
       span
         .user-name Evano
         .user-role Project Manager

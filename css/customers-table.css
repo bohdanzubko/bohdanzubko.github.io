@@ -1,88 +1,88 @@
 .cust-table{
-    width: 888px;
-    margin: 26px 40px 30px;
-    border-collapse: collapse;
-    border-spacing: 0
+	width: 888px;
+	margin: 26px 40px 30px;
+	border-collapse: collapse;
+	border-spacing: 0
 }
 
 .cust-table>thead{
-    border-bottom: 1px solid #EEE;
-    height: 49px;
+	border-bottom: 1px solid #EEE;
+	height: 49px;
 }
 
 .cust-table>thead th{
-    text-align: left;
-    color: #B5B7C0;
-    font-weight: 500;
-    letter-spacing: -0.14px;
+	text-align: left;
+	color: #B5B7C0;
+	font-weight: 500;
+	letter-spacing: -0.14px;
 }
 
 .cust-table th:last-child>div{
-    padding-left: 20px;
+	padding-left: 20px;
 }
 
 .cust-table>tbody{
-    margin: auto 40px;
-    border-bottom: 1px solid #EEE;
+	margin: auto 40px;
+	border-bottom: 1px solid #EEE;
 }
 
 .cust-table>tbody tr{
-    border-bottom: 1px solid #EEE;
-    height: 69px;
+	border-bottom: 1px solid #EEE;
+	height: 69px;
 }
 
 .cust-table>tbody div{
-    font-weight: 500;
-    letter-spacing: -0.14px;
+	font-weight: 500;
+	letter-spacing: -0.14px;
 }
 
 .cust-table th:nth-child(1){
-    width: 162px;
+	width: 162px;
 }
 
 .cust-table th:nth-child(2){
-    width: 131px;
+	width: 131px;
 }
 
 .cust-table th:nth-child(3){
-    width: 156px;
+	width: 156px;
 }
 
 .cust-table th:nth-child(4){
-    width: 207px;
+	width: 207px;
 }
 
 .cust-table th:nth-child(5){
-    width: 140px;
+	width: 140px;
 }
 
 .cust-table th:nth-child(6){
-    max-width: 84px;
+	max-width: 84px;
 }
 
 @media screen and (max-width: 768px){
-    .card-table{
-        border: 1px solid #EEE;
-        border-radius: 10px;
-        padding: 10px;
-    }
+	.card-table{
+		border: 1px solid #EEE;
+		border-radius: 10px;
+		padding: 10px;
+	}
 
-    .card-table:not(:last-child){
-        margin-bottom: 15px;
-    }
-    
-    .card-table>div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px 0;
-    }
-    
-    .card-table .label{
-        font-weight: bold;
-        margin-right: 10px;
-        color: #B5B7C0;
-        font-weight: 500;
-        letter-spacing: -0.14px;
-    }
+	.card-table:not(:last-child){
+		margin-bottom: 15px;
+	}
+	
+	.card-table>div{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 0;
+	}
+	
+	.card-table .label{
+		font-weight: bold;
+		margin-right: 10px;
+		color: #B5B7C0;
+		font-weight: 500;
+		letter-spacing: -0.14px;
+	}
 }
