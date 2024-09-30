@@ -1,0 +1,27 @@
+/*reset some standart styles*/
+@import "reset.css";
+
+/*set common styles for pages*/
+@import "common.css";
+
+@import "header.css";
+
+@import "navigation.css";
+
+@import "logo.css";
+
+@import "menu.css";
+
+@import "user-profile.css";
+
+@import "customers-section.css";
+
+@import "search-form.css";
+
+@import "customers-table.css";
+
+@import "status.css";
+
+@import "footer.css";
+
+@import "adaptive.css";

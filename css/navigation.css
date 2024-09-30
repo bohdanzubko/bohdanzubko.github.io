@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px){
+    .nav-btn{
+        margin-top: 20px;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        justify-self: end;
+    }
+}

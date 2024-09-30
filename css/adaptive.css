@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px){
+    .wrapper{
+        display: inline;
+    }
+
+    main{
+        padding: 0 10px;
+    }
+}

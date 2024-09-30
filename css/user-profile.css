@@ -1,0 +1,39 @@
+.user-profile{
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.user-name{
+	color: #000;
+	letter-spacing: 0.14px;
+}
+
+.user-role{
+	font-size: 12px;
+	color: #757575;
+	letter-spacing: 0.12px;
+}
+
+@media screen and (max-width: 768px){
+	header a{ /* user-profile */
+		justify-self: flex-end;
+	}
+
+	.user-profile div{
+		text-align: right;
+	}
+
+	.user-name{
+		font-size: 12px;
+	}
+
+	.user-role{
+		font-size: 10px;
+	}
+
+	.user-photo {
+		order: 2;
+		width: 35px;
+	}
+}

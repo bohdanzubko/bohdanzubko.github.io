@@ -1,0 +1,35 @@
+block selElm
+  - var selected = [true, false, false, false, false, false]
+
+header
+  .logo
+    img(src="../img/svg/logo-settings.svg" alt="Logo")
+    a(href="")
+      h1 Dashboard
+    h6 v.01
+
+  - var menuItems = ['Dashboard', 'Product', 'Customers', 'Income', 'Promote', 'Help']
+  - var icons = ['key-square', '3d-square', 'user-square', 'wallet-money', 'discount-shape', 'message-question']
+  - var links = ['index.html', 'product.html', 'customers.html', 'income.html', 'promote.html', 'help.html']
+
+  .overlay
+    nav.menu
+      ul
+        each item, index in menuItems
+          li(class="menu-elm" + (selected[index] ? " menu-elm-sel" : ""))
+            a(href=links[index])
+              img(src=`../img/svg/${icons[index] + (selected[index] ? "-wh" : "")}.svg`, alt=`${item} Icon`)
+              div #{item}
+              img(src=`../img/svg/${"menu-arrow" + (selected[index] ? "-wh" : "")}.svg`, style=(index == 0 ? "visibility: hidden;" : ""))
+
+  a(href="")
+    .user-profile
+      img(src="../img/jpg/account-photo.jpg" class="user-photo" alt="User Photo")
+      span
+        .user-name Evano
+        .user-role Project Manager
+  
+  button.nav-btn
+    span.nav-btn-line
+    span.nav-btn-line
+    span.nav-btn-line

@@ -1,0 +1,31 @@
+.search-field{
+    display: inline-flex;
+    align-items: center;
+    margin: 14px auto 9px auto;
+    width: 216px;
+    height: 38px;
+    border-radius: 10px;
+    background: #F9FBFF;
+}
+
+.search-field>img{
+    margin: 7px 8px;
+}
+
+.search-field>input{
+    border: none;
+    margin: 10px auto;
+    line-height: 18px;
+}
+
+.search-field>input::placeholder{
+    color: #B5B7C0;
+    font-size: 12px;
+    letter-spacing: -0.12px;
+}
+
+@media screen and (max-width: 768px){
+    .search-field{
+        margin: 0;
+    }
+}

@@ -1,0 +1,27 @@
+.logo{
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	width: 217px;
+}
+
+@media screen and (max-width: 768px){
+	.logo{
+		width: auto;
+		justify-content: left;
+		gap: 5px;
+	}
+
+	.logo img{
+		width: 30px;
+	}
+
+	.logo h1{
+		font-size: 20px;
+	}
+
+	.logo h6{
+		font-size: 8px;
+		margin-bottom: 3px;
+	}
+}

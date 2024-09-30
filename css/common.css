@@ -1,0 +1,47 @@
+body {
+	font-size: 14px;
+	font-family: Poppins;
+	background-color: #FAFBFF;
+	color: #292D32;
+}
+
+.wrapper {
+	width: auto;
+	margin: 0 auto;
+	display: flex;
+}
+
+main{
+	padding: 41px 0 0 71px;
+}
+
+h1{
+	font-size: 26px;
+	font-weight: 600;
+	color: #000;
+}
+
+h2{
+	font-size: 24px;
+	line-height: 36px;
+	text-align: center;
+	color: #000;
+}
+
+h3{
+	font-size: 20px;
+	line-height: 33px;
+}
+
+h6{
+	font-size: 10px;
+	line-height: 15px;
+	color: #838383;
+	letter-spacing: -0.1px;
+	margin-bottom: 6px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

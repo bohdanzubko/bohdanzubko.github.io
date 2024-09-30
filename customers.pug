@@ -1,0 +1,75 @@
+extends base.pug
+
+block title
+  - var pageTitle = 'Customers'
+
+block selElm
+  - var selected = [false, false, true, false, false, false]
+
+block content
+  - var names = ['Jane Cooper', 'Floyd Miles', 'Ronald Richards', 'Marvin McKinney', 'Jerome Bell', 'Kathryn Murphy', 'Jacob Jones', 'Kristin Watson']
+  - var companies = ['Microsoft', 'Yahoo', 'Adobe', 'Tesla', 'Google', 'Microsoft', 'Yahoo', 'Facebook']
+  - var phones = ['(225) 555-0118', '(205) 555-0100', '(302) 555-0107', '(252) 555-0126', '(629) 555-0129', '(406) 555-0120', '(208) 555-0112', '(704) 555-0127']
+  - var emails = ['jane@microsoft.com', 'floyd@yahoo.com', 'ronald@adobe.com', 'marvin@tesla.com', 'jerome@google.com', 'kathryn@microsoft.com', 'jacob@yahoo.com', 'kristin@facebook.com']
+  - var countries = ['United States', 'Kiribati', 'Israel', 'Iran', 'Réunion', 'Curaçao', 'Brazil', 'Åland Islands']
+  - var statuses = ['Active', 'Inactive', 'Inactive', 'Active', 'Active', 'Active', 'Active', 'Inactive']
+
+  main
+    h2.greeting-msg Hello Evano👋🏼,
+    hr.th-sep
+    section.customers-list
+      .item1
+        h3 All Customers
+        .act-mem Active members
+      form.search-form.item2(action="" method="POST")
+        .search-field
+          img(src="../img/svg/search.svg" alt="Search Icon")
+          input(type="text" placeholder="Search")
+      table.cust-table.item3(id="cust-table")
+        thead
+          tr
+            th 
+              .h-elm Customer Name
+            th 
+              .h-elm Company
+            th 
+              .h-elm Phone Number
+            th 
+              .h-elm Email
+            th 
+              .h-elm Country
+            th 
+              .h-elm Status
+        tbody
+          each name, index in names
+            tr
+              td 
+                .t-elm #{name}
+              td 
+                .t-elm #{companies[index]}
+              td 
+                .t-elm #{phones[index]}
+              td 
+                .t-elm #{emails[index]}
+              td 
+                .t-elm #{countries[index]}
+              td
+                .t-elm(class="status" + (statuses[index] === 'Active' ? ' act' : ' inact'))= statuses[index]
+      .sh-data.item4 Showing data 1 to 8 of 256K entries
+      nav.pages.item5
+        div
+          a(href="") #{'<'}
+        div
+          a(href="") 1
+        div
+          a(href="") 2
+        div
+          a(href="") 3
+        div
+          a(href="") 4
+        div ...
+        div
+          a(href="") 40
+        div
+          a(href="") #{'>'}
+    script(src="../js/adapt-table.js")
