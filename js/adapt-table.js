@@ -3,8 +3,10 @@ function adaptTable() {
     const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.innerText);
     const rows = Array.from(table.querySelectorAll('tbody tr'));
 
+    if (document.getElementById('cardContainer')) return;
+
     const cardContainer = document.createElement('div');
-    cardContainer.id = 'card-container';
+    cardContainer.id = 'cardContainer';
 
     rows.forEach(row => {
         const cells = row.querySelectorAll('td');
@@ -26,9 +28,8 @@ function adaptTable() {
 
         const lastCardRow = card.lastChild;
         const lastValue = lastCardRow.querySelector('div:last-child');
-        
+
         lastValue.classList.add('status');
-        
         if (lastValue.innerText.toLowerCase() === 'active') {
             lastValue.classList.add('act');
         } else if (lastValue.innerText.toLowerCase() === 'inactive') {
@@ -38,20 +39,25 @@ function adaptTable() {
         cardContainer.appendChild(card);
     });
 
+    // Додаємо картки на сторінку
     table.parentNode.insertBefore(cardContainer, table);
     table.style.display = 'none';
+}
+
+function restoreTable() {
+    const table = document.getElementById('cust-table');
+    table.style.display = '';
+    const cardContainer = document.getElementById('cardContainer');
+    if (cardContainer) {
+        cardContainer.remove();
+    }
 }
 
 function checkScreenSize() {
     if (window.innerWidth <= 768) {
         adaptTable();
     } else {
-        const table = document.getElementById('cust-table');
-        table.style.display = '';
-        const cardContainer = document.getElementById('card-container');
-        if (cardContainer) {
-            cardContainer.remove();
-        }
+        restoreTable();
     }
 }
 
